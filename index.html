@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیاکو - امنیت و آزادی در دنیای اینترنت</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+	<script type="text/javascript">
+	    window.$crisp=[];
+	    window.CRISP_WEBSITE_ID="888c3c31-01ad-4e36-bea1-94df8bef67e8";
+	    window.$crisp.push(["do", "button:hide"]);
+	    (function(){
+	        d=document;s=d.createElement("script");
+	        s.src="https://client.crisp.chat/l.js";
+	        s.async=1;
+	        d.getElementsByTagName("head")[0].appendChild(s);
+	    })();
+	</script>
+
+	<style>
+		/* --- RESET & FONT --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Vazirmatn, sans-serif;
+        }
+        
+        /* --- NEW COLOR PALETTE --- */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9; /* Kept for icon consistency */
+            --dark: #1e293b; /* Slate 900 */
+            --light: #f8fafc; /* Slate 50 */
+            --accent: #f97316;
+            --success: #22c55e;
+            --text-dark: #1e293b;
+            --text-light: #475569; /* Slate 600 */
+            --border-light: #e2e8f0; /* Slate 200 */
+        }
+        
+        /* --- NEW BODY STYLES --- */
+        body {
+            background: var(--light);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* --- NEW HEADER --- */
+        header {
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark); /* Changed */
+        }
+        
+        .logo i {
+            color: var(--primary); /* Changed */
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--text-light); /* Changed */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary); /* Changed */
+        }
+        
+        /* --- CTA Button (Kept general styles) --- */
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 10px 22px; /* Slightly larger */
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            font-size: 0.95rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark); /* Changed */
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* --- NEW HERO SECTION --- */
+        .hero {
+            padding: 160px 0 100px; /* More padding */
+            position: relative;
+            overflow: hidden;
+            background: white; /* Clean white background for hero */
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            text-align: center; /* Center on mobile */
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem; /* Slightly larger */
+            font-weight: 900;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 .text-primary {
+            color: var(--primary);
+            display: inline-block; /* Keeps it together */
+        }
+        
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            color: var(--text-light);
+            max-width: 100%;
+            padding: 0 10px;
+        }
+        
+        .main-cta {
+            background: var(--accent); /* Orange CTA */
+            padding: 18px 55px;
+            font-size: 1.2rem; /* Adjusted */
+            font-weight: 700;
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+        }
+        
+        .main-cta:hover {
+            background: #ea580c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        }
+        
+        .hero-visual {
+            /* Removed */
+        }
+
+        /* Placeholder for illustration */
+        .hero-visual img {
+           /* Removed */
+        }
+
+        /* --- NEW FEATURES SECTION --- */
+        .features {
+            padding: 80px 0; /* More padding */
+            background: var(--light); /* Light gray bg */
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 60px; /* More margin */
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary); /* Changed to primary */
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: -40px auto 50px; /* Adjusted */
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; /* More gap */
+        }
+        
+        .feature-card {
+            background: #ffffff; /* White card */
+            border-radius: 15px;
+            padding: 30px; /* More padding */
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(37, 99, 235, 0.1); /* Light primary bg */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px; /* More margin */
+        }
+        
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--primary); /* Primary color */
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            min-height: 50px;
+        }
+
+        .os-icons, .flags {
+            margin-top: 20px; /* More margin */
+            font-size: 1.8rem;
+            color: #94a3b8; /* Slate 400 */
+        }
+
+        .os-icons i { margin: 0 8px; }
+        .flags img { margin: 0 5px; height: 24px; border-radius: 3px; }
+        
+        /* --- NEW PLANS SECTION --- */
+        .plans {
+            padding: 80px 0;
+            background: white; /* White section */
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .plan-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-card .plan-features { flex-grow: 1; }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        }
+        
+        .plan-card.popular {
+            border: 2px solid var(--primary); /* Primary border */
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--primary); /* Primary badge */
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary); /* Primary color */
+        }
+        
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .plan-price span {
+            font-size: 0.9rem;
+            color: #94a3b8; /* Slate 400 */
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        .plan-features li:last-child { border-bottom: none; }
+
+        /* --- Plan CTA Buttons --- */
+        .plan-card .cta-button {
+             background-color: var(--primary); /* Blue by default */
+             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+         }
+
+        .plan-card .cta-button:hover {
+             background-color: var(--primary-dark);
+             box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+         }
+        
+        /* Popular plan gets accent CTA */
+        .plan-card.popular .cta-button {
+            background-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+        .plan-card.popular .cta-button:hover {
+            background-color: #ea580c;
+            box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+        }
+
+        
+        /* --- NEW EXTRA INFO SECTION --- */
+        .extra-info {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        .extra-info-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px 50px; /* More padding */
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        .extra-info-content p {
+            font-size: 1.05rem; /* Slightly larger */
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+         .extra-info-content p:first-child { margin-bottom: 20px; }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials {
+            padding: 80px 0 0; /* Padding top only, bottom comes from FAQ */
+            background: white; /* White bg */
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px); /* Less hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        .testimonial-stars {
+            color: #f59e0b; /* Amber 500 */
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            flex-grow: 1; /* Ensures cards have same height */
+        }
+        .testimonial-author {
+            text-align: right;
+        }
+        .testimonial-author-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+        .testimonial-author-title {
+            font-size: 0.85rem;
+            color: #94a3b8; /* Slate 400 */
+        }
+
+
+        /* --- FAQ SECTION --- */
+        .faq {
+            padding: 80px 0;
+            background: white; /* White bg */
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 15px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            overflow: hidden; /* To keep border-radius */
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border-light);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: background-color 0.2s;
+        }
+        .faq-question:hover {
+            background-color: var(--light);
+        }
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s ease;
+            font-size: 0.9rem; /* Icon size */
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out; /* Smoother transition */
+        }
+        .faq-answer p {
+            padding: 0 25px 20px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        /* Active state for FAQ item */
+        .faq-item.active .faq-answer {
+            /* max-height is set by JS */
+        }
+        .faq-item.active .faq-question i {
+            /* Icon class is toggled by JS */
+        }
+
+
+        /* --- NEW FOOTER --- */
+        footer {
+            background: #ffffff;
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary); /* Changed */
+        }
+        
+        .footer-column p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a:hover { color: var(--primary); }
+        
+        .footer-links i {
+            width: 20px;
+            margin-left: 8px;
+            color: var(--primary); /* Changed */
+        }
+        
+        /* Social links removed from HTML */
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+            color: #94a3b8; /* Slate 400 */
+            font-size: 0.85rem;
+        }
+        
+        /* --- MOBILE MENU (Light theme) --- */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            z-index: 1100;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease;
+            backdrop-filter: blur(10px);
+            border-right: 1px solid var(--border-light);
+        }
+        
+        .mobile-nav.active { right: 0; }
+        
+        .mobile-nav-links { list-style: none; }
+        .mobile-nav-links li { margin-bottom: 20px; }
+        
+        .mobile-nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+         .mobile-nav-links a:hover { color: var(--primary); }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- SUPPORT WIDGET (No change) --- */
+		.support-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        .support-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #22c55e;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s;
+        }
+        .support-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+        }
+        
+        /* --- RESPONSIVE DESIGN --- */
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            
+            .hero { padding: 120px 0 50px; }
+            
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.05rem; }
+            
+            .section-title { font-size: 1.8rem; }
+            
+            .features-grid,
+            .plans-grid,
+            .testimonials-grid { grid-template-columns: 1fr; }
+            
+            .plan-card.popular { transform: scale(1); }
+            
+            .footer-content { grid-template-columns: 1fr; }
+
+            .hero-visual { margin-top: 30px; }
+        }
+        
+        @media (min-width: 769px) {
+            /* --- New Hero Grid Layout for Desktop --- */
+            .hero-grid {
+                /* grid-template-columns: 1fr 1fr; */ /* Removed */
+                /* gap: 50px; */
+            }
+            .hero-content {
+                text-align: center; /* Align text to center */
+            }
+             .hero p {
+                padding: 0 10px; /* Keep padding for mobile */
+            }
+            .hero-visual {
+                /* order: -1; */ /* Removed */
+                display: none;
+            }
+            
+            .hero h1 { font-size: 2.8rem; }
+            .mobile-nav { display: none; }
+        }
+        
+        @media (min-width: 992px) {
+            .hero h1 { font-size: 3.2rem; }
+            .section-title { font-size: 2.3rem; }
+            
+            .features-grid { grid-template-columns: repeat(3, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+            .plans-grid { grid-template-columns: repeat(3, 1fr); }
+            
+            .plan-card.popular {
+                transform: scale(1.05); /* Pop-out effect */
+            }
+        }
+	</style>
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#">خانه</a></li>
+            <li><a href="#plans">پلن‌ها</a></li>
+            <li><a href="#">سرورها</a></li>
+            <li><a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;">تماس با ما</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    دیاکو 
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#plans">پلن‌ها</a></li>
+                    <li><a href="#">سرورها</a></li>
+                    <li><a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;">تماس با ما</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- New 1-Column Grid -->
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <!-- Updated H1 with primary color span -->
+                    <h1><span class="text-primary">مرزهای اینترنت</span> را درنوردید!</h1>
+                    <p>با دیاکو  به آزادی و امنیت واقعی در دنیای وب دست پیدا کنید. بدون محدودیت، بدون افت سرعت و با تضمین حریم خصوصی شما.</p>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button main-cta">دریافت تست رایگان 😍</a>
+                </div>
+                <!-- Hero Visual Div Removed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">چرا دیاکو ؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>دسترسی جهانی</h3>
+                    <p>با خرید یک سرویس میتوانید به ۶ کشور مختلف وصل شوید.</p>
+                    <div class="flags">
+                        <img src="https://flagcdn.com/h24/us.png" alt="پرچم آمریکا">
+                        <img src="https://flagcdn.com/h24/gb.png" alt="پرچم انگلیس">
+                        <img src="https://flagcdn.com/h24/fi.png" alt="پرچم کانادا">
+                        <img src="https://flagcdn.com/h24/tr.png" alt="پرچم ترکیه">
+                        <img src="https://flagcdn.com/h24/de.png" alt="پرچم آلمان">
+                        <img src="https://flagcdn.com/h24/nl.png" alt="پرچم هلند">
+                    </div> 
+                </div>
+				<div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>سرعت بالا</h3>
+                    <p>با سرورهای پرسرعت در سراسر جهان، بدون افت سرعت به وبگردی بپردازید.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>نصب آسان و سریع</h3>
+                    <p>قابلیت اتصال روی انواع سیستم عامل ها</p>
+                    <div class="os-icons">
+                        <i class="fab fa-android"></i>
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-windows"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2 class="section-title">پلن‌های اشتراک</h2>
+			<p class="section-subtitle">پلن متناسب با نیاز خود را انتخاب کنید و همین امروز اتصال امن خود را شروع کنید.</p>
+            <div class="plans-grid">
+                <!-- Plan 1 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">سه ماهه تک‌کاربره</h3>
+                    <div class="plan-price">۳۹۶,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+                <!-- Plan 2 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">دوماهه تک‌کاربره</h3>
+                    <div class="plan-price">۲۶۹,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+                <!-- Plan 3 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">یکماهه تک‌کاربره</h3>
+                    <div class="plan-price">۱۵۰,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+
+                <!-- Plan 4 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">سه ماهه دوکاربره</h3>
+                    <div class="plan-price">۵۲۹,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+                <!-- Plan 5 (Popular) -->
+                <div class="plan-card popular">
+                     <div class="popular-badge">پیشنهاد ویژه</div>
+                    <h3 class="plan-name">دوماهه دوکاربره</h3>
+                    <div class="plan-price">۳۵۹,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <!-- Popular CTA is now accent color (orange) -->
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+                <!-- Plan 6 -->
+                <div class="plan-card">
+                    <h3 class="plan-name">یکماهه دوکاربره</h3>
+                    <div class="plan-price">۲۰۰,۰۰۰ <span>تومان</span></div>
+                    <ul class="plan-features">
+                        <li>بیش از 6 لوکیشن</li>
+                        <li>آیپی ثابت</li>
+                        <li>ترافیک نامحدود</li>
+                        <li>قابلیت Kill-Switch</li>
+                        <li>تحویل آنی</li>
+                    </ul>
+                    <a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;" class="cta-button">خرید سرویس از چت آنلاین</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Text Section -->
+    <section class="extra-info">
+        <div class="container">
+            <h2 class="section-title">تعهد ما به کیفیت و امنیت</h2>
+            <div class="extra-info-content">
+                <p>در دیاکو، ما فقط یک سرویس ارائه نمی‌دهیم؛ ما یک تجربه‌ی اینترنتی پایدار و بدون دغدغه را تضمین می‌کنیم. تیم پشتیبانی ما به صورت ۲۴ ساعته آماده پاسخگویی به سوالات شماست تا اطمینان حاصل شود که شما همیشه بهترین اتصال ممکن را در اختیار دارید.</p>
+                <p>حفظ حریم خصوصی شما اولویت اصلی ماست. با سرویس‌های اتصال امن دیاکو، اطلاعات شما همیشه محافظت می‌شود. ما باور داریم که دسترسی به اینترنت باید آزادانه و امن باشد.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">نظرات مشتریان ما</h2>
+            <p class="section-subtitle">ببینید دیگران درباره دیاکو چه می‌گویند.</p>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"سرعت و پایداری سرویس واقعاً عالیه. من برای ترید استفاده می‌کنم و تا حالا هیچ مشکلی با آی‌پی ثابت نداشتم. پشتیبانی هم همیشه در دسترسه."</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-author-name">محمد رضایی</p>
+                        <p class="testimonial-author-title">کاربر پلن سه‌ماهه</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"پشتیبانی فوق‌العاده‌ بود. اکانت تست رو درجا برام فعال کردن. بعد از خرید هم برای نصب روی آیفون خیلی سریع راهنماییم کردن. ممنونم."</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-author-name">سارا الماسی</p>
+                        <p class="testimonial-author-title">کاربر پلن دوکاربره</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"من چندین سرویس رو امتحان کرده بودم، ولی دیاکو تنها سرویسی بود که همزمان روی همه‌ی لوکیشن‌ها پایداری خوبی داشت. واقعا ارزشش رو داره."</p>
+                    <div class="testimonial-author">
+                        <p class="testimonial-author-name">علی اکبری</p>
+                        <p class="testimonial-author-title">کاربر پلن یک‌ماهه</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">سوالات متداول</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>آیا می‌توانم سرویس را قبل از خرید تست کنم؟</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بله، ما یک سرویس تست رایگان ۲۴ ساعته ارائه می‌دهیم. کافیست با پشتیبانی آنلاین ما تماس بگیرید تا اکانت تست خود را دریافت کنید.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>سرویس شما روی چه دستگاه‌هایی قابل استفاده است؟</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>سرویس دیاکو بر روی تمامی سیستم‌عامل‌های محبوب از جمله اندروید، iOS (آیفون و آیپد) و ویندوز به راحتی قابل نصب و استفاده است.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>آیا ترافیک سرویس‌ها نامحدود است؟</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بله، تمامی پلن‌های ما دارای ترافیک نامحدود هستند و شما می‌توانید بدون نگرانی از حجم مصرفی، از اینترنت آزاد لذت ببرید.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>آی‌پی ثابت به چه معناست؟</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>آی‌پی ثابت (Static IP) به این معناست که آدرس اینترنتی شما هنگام اتصال به سرورهای ما تغییر نمی‌کند. این ویژگی برای ترید، دسترسی به حساب‌های بانکی خارج از کشور و برخی بازی‌های آنلاین بسیار مفید است.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Support Button -->
+    <div class="support-widget" onclick="$crisp.push(['do', 'chat:toggle']);" style="cursor: pointer;">
+        <div class="support-button">    
+		<i class="fas fa-headset"></i>
+        </div>
+    </div>
+	<!-- Telegram Button Removed -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره دیاکو</h3>
+                    <p>دیاکو با بیش از ۵ سال سابقه، ارائه‌دهنده‌ای مطمئن در زمینه سرویس‌های اتصال امن با سرورهای پرسرعت در سراسر جهان می‌باشد.</p>
+                    <!-- Social Links Removed -->
+                </div>
+                <div class="footer-column">
+                    <h3>لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-download"></i>دانلود اپلیکیشن</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i>راهنمای نصب</a></li>
+                        <li><a href="#"><i class="fas fa-blog"></i>وبلاگ</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i>سوالات متداول</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i>قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$crisp.push(['do', 'chat:toggle']); return false;"><i class="fas fa-headset"></i>پشتیبانی آنلاین</a></li>
+                        <!-- Telegram Link Removed -->
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق برای دیاکو  محفوظ است. © ۱۴۰۲</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.add('active');
+        });
+        
+        mobileNavClose.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (mobileNav.classList.contains('active')) {
+                if (!mobileNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                    mobileNav.classList.remove('active');
+                }
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // FAQ Accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                // Toggle active class on the item
+                item.classList.toggle('active');
+                
+                if (item.classList.contains('active')) {
+                    // Open the answer
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    // Close the answer
+                    answer.style.maxHeight = '0';
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
